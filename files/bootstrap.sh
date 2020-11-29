@@ -28,6 +28,9 @@ function print_help {
 
 POSITIONAL=()
 
+BOOTSTRAP_EXTRA_ARGS="$(cat /etc/eks/bootstrap-extra-args-user.txt)"
+set -- "$@" ${BOOTSTRAP_EXTRA_ARGS}
+
 while [[ $# -gt 0 ]]; do
     key="$1"
     case $key in
