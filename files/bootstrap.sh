@@ -343,18 +343,16 @@ systemctl daemon-reload
 systemctl enable kubelet
 systemctl start kubelet
 
-echo "kubelet logs (1)"
 # https://stackoverflow.com/questions/34113476/where-are-the-kubernetes-kubelet-logs-located
+# https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+echo "kubelet logs (1)"
 journalctl -u kubelet --no-pager
 sleep 10
 echo "kubelet logs (2)"
-# https://stackoverflow.com/questions/34113476/where-are-the-kubernetes-kubelet-logs-located
 journalctl -u kubelet --no-pager
 sleep 10
 echo "kubelet logs (3)"
-# https://stackoverflow.com/questions/34113476/where-are-the-kubernetes-kubelet-logs-located
 journalctl -u kubelet --no-pager
 sleep 10
 echo "kubelet logs (4)"
-# https://stackoverflow.com/questions/34113476/where-are-the-kubernetes-kubelet-logs-located
 journalctl -u kubelet --no-pager
