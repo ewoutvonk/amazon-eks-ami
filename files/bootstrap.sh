@@ -342,3 +342,15 @@ fi
 systemctl daemon-reload
 systemctl enable kubelet
 systemctl start kubelet
+
+echo "kubelet logs (1)"
+journalctl -u kubelet --no-pager
+sleep 10
+echo "kubelet logs (2)"
+journalctl -u kubelet --no-pager
+sleep 10
+echo "kubelet logs (3)"
+journalctl -u kubelet --no-pager
+sleep 10
+echo "kubelet logs (4)"
+journalctl -u kubelet --no-pager
